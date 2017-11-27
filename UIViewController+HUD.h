@@ -26,5 +26,5 @@
 
 - (void) hideHud; // Animated by default
 - (void) hideHudAnimated:(BOOL)animated;
-
+- (void) showHudAddedForView:(UIView *)view;
 @end
