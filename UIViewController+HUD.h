@@ -21,10 +21,11 @@
 - (void) showHudWithTitle:(NSString*)title animated:(BOOL)animated;
 - (void) showHudWithTitle:(NSString*)title andSubtitle:(NSString*)subtitle; // Animated by default
 - (void) showHudWithTitle:(NSString*)title andSubtitle:(NSString*)subtitle animated:(BOOL)animated;
+- (void) showHudAddedForView:(UIView *)view;
 
 #pragma mark - Hide Options
 
 - (void) hideHud; // Animated by default
 - (void) hideHudAnimated:(BOOL)animated;
-- (void) showHudAddedForView:(UIView *)view;
+
 @end
