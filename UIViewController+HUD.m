@@ -70,6 +70,24 @@ NSString * const kHudPropertyKey = @"kViewControllerHud";
     
 }
 
+-(void)showHudAddedForView:(UIView *)view
+{
+    BOOL alreadyInstanitated = YES;
+    if(![self hud]) {
+        [self setHud:[[MBProgressHUD alloc] initWithView:view]];
+        [[self hud] setRemoveFromSuperViewOnHide:YES];
+        alreadyInstanitated = NO;
+    }
+    
+    // Customize the HUD...
+    [[self hud] setLabelText:NSLocalizedString(@"Loading...", @"Loading...")];
+    
+    // Display the HUD if required...
+    if(!alreadyInstanitated) {
+        [view addSubview:[self hud]];
+        [[self hud] show:YES];
+    }
+}
 #pragma mark - Hide Options
 
 - (void) hideHud {
