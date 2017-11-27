@@ -3,15 +3,7 @@ UIViewController-HUD
 
 A nicer way to show HUD's on your ViewControllers (using Cocoapods).
 
-## Installation
 
-Add this line to your `Podfile`:
-
-```
-pod 'UIViewController+HUD', '~> 1.0.0'
-```
-
-then run `pod install`.
 
 ## Usage
 
